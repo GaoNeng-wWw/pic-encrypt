@@ -1,0 +1,15 @@
+{
+  "name": "pic-encrypt-wasm",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "pic_encrypt_wasm_bg.wasm",
+    "pic_encrypt_wasm.js",
+    "pic_encrypt_wasm.d.ts"
+  ],
+  "main": "pic_encrypt_wasm.js",
+  "types": "pic_encrypt_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
