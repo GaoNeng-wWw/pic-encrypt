@@ -2,7 +2,6 @@
 import { ref, useTemplateRef } from 'vue';
 import init, {Logistic} from './wasm';
 import { useDark, watchDebounced } from '@vueuse/core';
-import { SliderRange, SliderRoot, SliderThumb, SliderTrack } from 'reka-ui';
 
 let ch: Logistic | null = null;
 const key = ref([0.5]);
