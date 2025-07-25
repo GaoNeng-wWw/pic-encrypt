@@ -126,22 +126,6 @@ useDark();
                 混沌参数 Key (越靠近1混沌成都越高)
               </label>
               <div class="flex items-center space-x-3">
-                <SliderRoot 
-                  v-model="key" 
-                  :min="0" 
-                  :max="1" 
-                  :step="0.001"
-                  class="relative flex items-center select-none touch-none flex-1 h-5"
-                >
-                  <SliderTrack class="bg-slate-300 dark:bg-slate-600 relative grow rounded-full h-2">
-                    <SliderRange class="absolute bg-blue-500 rounded-full h-full" />
-                  </SliderTrack>
-                  <SliderThumb class="
-                    block w-5 h-5 bg-white dark:bg-slate-200 shadow-lg border-2 border-blue-500 
-                    rounded-full hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-                    cursor-pointer transition-colors
-                  " />
-                </SliderRoot>
                 <input
                   v-model.number="keyInput"
                   @input="updateKeyFromInput"
@@ -154,7 +138,7 @@ useDark();
                     bg-slate-50 dark:bg-slate-700 
                     border border-slate-300 dark:border-slate-600
                     rounded-md
-                    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+                    focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full
                   "
                 />
               </div>
@@ -165,22 +149,6 @@ useDark();
                 随机种子 Seed (正整数)
               </label>
               <div class="flex items-center space-x-3">
-                <SliderRoot 
-                  v-model="seed" 
-                  :min="1" 
-                  :max="9999" 
-                  :step="1"
-                  class="relative flex items-center select-none touch-none flex-1 h-5"
-                >
-                  <SliderTrack class="bg-slate-300 dark:bg-slate-600 relative grow rounded-full h-2">
-                    <SliderRange class="absolute bg-green-500 rounded-full h-full" />
-                  </SliderTrack>
-                  <SliderThumb class="
-                    block w-5 h-5 bg-white dark:bg-slate-200 shadow-lg border-2 border-green-500 
-                    rounded-full hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
-                    cursor-pointer transition-colors
-                  " />
-                </SliderRoot>
                 <input
                   v-model.number="seedInput"
                   @input="updateSeedFromInput"
@@ -193,6 +161,7 @@ useDark();
                     border border-slate-300 dark:border-slate-600
                     rounded-md
                     focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent
+                    w-full
                   "
                 />
               </div>
@@ -213,7 +182,7 @@ useDark();
                   rounded-xl cursor-pointer
                   transition-all duration-300
                   hover:border-blue-400 dark:hover:border-blue-500
-                  hover:bg-slate-100 dark:hover:bg-slate-600
+                  hover:bg-slate-100 dark:hover:bg-slate-600 box-border
                   focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
                 "
                 @click="()=>file?.click()"
